@@ -1,0 +1,8 @@
+{
+  "not_exist": {
+    "status": "rejected",
+    "processed_ts": "2026-04-20T12:27:25",
+    "order": null,
+    "error": null
+  }
+}
