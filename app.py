@@ -108,14 +108,20 @@ def root():
 
 @api.get("/chat", response_class=HTMLResponse)
 def page_chat(request: Request):
-    return templates.TemplateResponse("chat.html",
-                                      {"request": request, "active": "chat"})
+    return templates.TemplateResponse(
+        request=request,
+        name="chat.html",
+        context={"request": request, "active": "chat"},
+    )
 
 
 @api.get("/morning", response_class=HTMLResponse)
 def page_morning(request: Request):
-    return templates.TemplateResponse("morning.html",
-                                      {"request": request, "active": "morning"})
+    return templates.TemplateResponse(
+        request=request,
+        name="morning.html",
+        context={"request": request, "active": "morning"},
+    )
 
 
 @api.get("/live", response_class=HTMLResponse)
@@ -126,34 +132,47 @@ def page_live():
 
 @api.get("/live/sim", response_class=HTMLResponse)
 def page_live_sim(request: Request):
-    return templates.TemplateResponse("live.html",
-                                      {"request": request, "active": "live",
-                                       "view_mode": "sim"})
+    return templates.TemplateResponse(
+        request=request,
+        name="live.html",
+        context={"request": request, "active": "live", "view_mode": "sim"},
+    )
 
 
 @api.get("/live/real", response_class=HTMLResponse)
 def page_live_real(request: Request):
-    return templates.TemplateResponse("live.html",
-                                      {"request": request, "active": "live",
-                                       "view_mode": "real"})
+    return templates.TemplateResponse(
+        request=request,
+        name="live.html",
+        context={"request": request, "active": "live", "view_mode": "real"},
+    )
 
 
 @api.get("/backtest", response_class=HTMLResponse)
 def page_backtest(request: Request):
-    return templates.TemplateResponse("backtest.html",
-                                      {"request": request, "active": "backtest"})
+    return templates.TemplateResponse(
+        request=request,
+        name="backtest.html",
+        context={"request": request, "active": "backtest"},
+    )
 
 
 @api.get("/review", response_class=HTMLResponse)
 def page_review(request: Request):
-    return templates.TemplateResponse("review.html",
-                                      {"request": request, "active": "review"})
+    return templates.TemplateResponse(
+        request=request,
+        name="review.html",
+        context={"request": request, "active": "review"},
+    )
 
 
 @api.get("/system", response_class=HTMLResponse)
 def page_system(request: Request):
-    return templates.TemplateResponse("system.html",
-                                      {"request": request, "active": "system"})
+    return templates.TemplateResponse(
+        request=request,
+        name="system.html",
+        context={"request": request, "active": "system"},
+    )
 
 
 # ------------- 挂载 Gradio 到 /gradio-chat/ (供 /chat 页面 iframe 嵌入) -------------
