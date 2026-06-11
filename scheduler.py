@@ -19,15 +19,7 @@ TradingScheduler -- 按 A 股交易时段自动启停 +（可选）板块日更�
     python scheduler.py --simulate
     python scheduler.py --job data | engine | all
 """
-from __future__ import annotations
 
-import argparse
-import logging
-import os
-import subprocess
-import sys
-from datetime import datetime
-from pathlib import Path
 
 if sys.platform == "win32":
     os.environ.setdefault("PYTHONUTF8", "1")
